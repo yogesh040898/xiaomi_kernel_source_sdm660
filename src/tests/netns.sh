@@ -69,6 +69,7 @@ printf 0 > /proc/sys/net/core/message_cost
 ip netns del $netns0 2>/dev/null || true
 ip netns del $netns1 2>/dev/null || true
 ip netns del $netns2 2>/dev/null || true
+<<<<<<< HEAD
 pp ip netns add $netns0
 pp ip netns add $netns1
 pp ip netns add $netns2
@@ -78,6 +79,7 @@ ip0 link add dev wg0 type wireguard
 ip0 link set wg0 netns $netns1
 ip0 link add dev wg0 type wireguard
 ip0 link set wg0 netns $netns2
+<<<<<<< HEAD
 key1="$(pp wg genkey)"
 key2="$(pp wg genkey)"
 key3="$(pp wg genkey)"
@@ -120,6 +122,7 @@ tests() {
 	n1 ping -c 10 -f -W 1 192.168.241.2
 
 	# Ping over IPv6
+<<<<<<< HEAD
 	n2 ping6 -c 10 -f -W 1 fd00::1
 	n1 ping6 -c 10 -f -W 1 fd00::2
 
